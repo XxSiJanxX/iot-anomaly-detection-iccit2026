@@ -282,6 +282,7 @@ def plot_vae_reconstruction_dist(vae_model, X_test, y_test,
     uniform values for a stable KDE fit (e.g. a near-degenerate class).
     """
     scores = vae_model.anomaly_score(X_test)
+    mcc_title = None
     benign  = scores[y_test == 0]
     attack  = scores[y_test == 1]
 
@@ -294,7 +295,7 @@ def plot_vae_reconstruction_dist(vae_model, X_test, y_test,
     pad = (hi - lo) * 0.02 if hi > lo else 1e-6
     bins = np.linspace(lo - pad, hi + pad, 80)
 
-    for data, color, name in [(benign, normal_color, "Normal"),
+    for data, color, name in [(benign, normal_color, "Benign"),
                                (attack, attack_color, "Attack")]:
         ax.hist(data, bins=bins, alpha=0.30, color=color, density=True,
                 label="_nolegend_")
@@ -314,18 +315,17 @@ def plot_vae_reconstruction_dist(vae_model, X_test, y_test,
         try:
             preds = (scores > threshold).astype(int)
             mcc = matthews_corrcoef(y_test, preds)
-            ax.text(0.97, 0.95, f"MCC = {mcc:.2f}", transform=ax.transAxes,
-                    ha="right", va="top", fontsize=11, fontweight="bold",
-                    bbox=dict(boxstyle="round,pad=0.35", fc="white",
-                              ec="#333333", alpha=0.9))
+            mcc_title = f"MCC = {mcc:.2f}"
         except Exception:
             pass
 
-    ax.set_xlabel("ELBO Reconstruction Loss")
-    ax.set_ylabel("Density")
-    ax.set_title(f"VAE Reconstruction Error Distribution \u2014 {dataset_name.upper()}",
-                 fontweight="bold")
-    ax.legend(loc="upper left", frameon=True)
+    ax.set_xlabel("Anomaly score (reconstruction + KL loss)", fontsize=19)
+    ax.set_ylabel("Density", fontsize=19)
+    ax.tick_params(axis="both", labelsize=16)
+    # Camera-ready: no in-image title; the figure caption names each panel.
+    leg = ax.legend(loc="best", frameon=True, fontsize=16, title=mcc_title,
+                    title_fontproperties={"weight": "bold", "size": 16})
+    leg.get_frame().set_alpha(0.9)
     ax.grid(alpha=0.2, linestyle=":")
     sns.despine(ax=ax)
     fig.tight_layout()
