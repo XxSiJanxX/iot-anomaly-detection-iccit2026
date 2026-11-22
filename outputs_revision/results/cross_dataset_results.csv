@@ -1,0 +1,7 @@
+src_dataset,tgt_dataset,model,f1,mcc,roc_auc,accuracy,recall,fpr,threshold,n_common_features,src_total_features,tgt_total_features,note,n_test,mcc_ci_low,mcc_ci_high,f1_ci_low,f1_ci_high,recall_ci_low,recall_ci_high,fpr_ci_low,fpr_ci_high,roc_auc_ci_low,roc_auc_ci_high
+nbaiot,ciciot2023,N/A,,,,,,,,0,33,32,no_common_features_complete_domain_shift,,,,,,,,,,,
+nbaiot,iot23,N/A,,,,,,,,0,33,12,no_common_features_complete_domain_shift,,,,,,,,,,,
+ciciot2023,nbaiot,N/A,,,,,,,,0,32,33,no_common_features_complete_domain_shift,,,,,,,,,,,
+ciciot2023,iot23,RandomForest,0.8799,-0.0618,0.5293,0.7862,0.9499,0.9834,0.7,2,32,12,"common_features: ['protocol', 'total_bytes']",35977.0,-0.0688,-0.0553,0.8773,0.8825,0.9474,0.9523,0.9804,0.9863,0.5253,0.5351
+iot23,nbaiot,N/A,,,,,,,,0,12,33,no_common_features_complete_domain_shift,,,,,,,,,,,
+iot23,ciciot2023,RandomForest,0.3901,-0.2912,0.193,0.2461,0.2523,0.8877,0.25,2,12,32,"common_features: ['protocol', 'total_bytes']",792051.0,-0.2933,-0.2891,0.3888,0.3913,0.2513,0.2533,0.8843,0.891,0.1921,0.194

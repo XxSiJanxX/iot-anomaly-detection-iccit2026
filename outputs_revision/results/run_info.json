@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-22T03:04:27",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+  "cpu_count": 12,
+  "random_seed": 42,
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "sklearn": "1.9.0",
+  "imblearn": "0.14.2",
+  "xgboost": "3.2.0",
+  "tensorflow": "2.21.0",
+  "shap": "0.51.0",
+  "scipy": "1.17.1",
+  "tf_gpus": []
+}

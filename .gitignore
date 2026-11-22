@@ -1,0 +1,26 @@
+# Datasets (public, download separately; see README)
+data/
+{data/
+
+# Trained models, checkpoints and logs (large / machine-specific)
+outputs/
+outputs_revision/models/
+outputs_revision/run_state/
+outputs_revision/logs/
+*.pkl
+*.h5
+*.rar
+
+# Working folders not part of the code release
+_revision_tmp/
+camera_ready/
+notebooks/.ipynb_checkpoints/
+main.tex
+Methodology Diagram*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env

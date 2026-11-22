@@ -1,0 +1,5 @@
+dataset,model_a,model_b,mcc_diff,mcc_diff_ci_low,mcc_diff_ci_high,mcnemar_a_only_correct,mcnemar_b_only_correct,mcnemar_stat,mcnemar_p
+nbaiot,D_Hybrid_Weighted,A_Supervised_Only,0.0,0.0,0.0,0,0,0.0,1.0
+nbaiot,D_Hybrid_Weighted,A2_Supervised_TunedThreshold,-0.0011,-0.0013,-0.0009,18,148,100.247,1.3452976188549256e-23
+nbaiot,C_Hybrid_OR,A_Supervised_Only,-0.0481,-0.0493,-0.047,1,5853,5848.0015,0.0
+nbaiot,A2_Supervised_TunedThreshold,A_Supervised_Only,0.0011,0.0009,0.0013,148,18,100.247,1.3452976188549256e-23

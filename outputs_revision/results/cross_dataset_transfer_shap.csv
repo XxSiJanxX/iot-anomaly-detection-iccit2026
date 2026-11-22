@@ -1,0 +1,9 @@
+src_dataset,tgt_dataset,evaluated_on,feature,mean_abs_shap
+ciciot2023,iot23,source_test,protocol,0.024446
+ciciot2023,iot23,source_test,total_bytes,0.068603
+ciciot2023,iot23,target,protocol,0.013899
+ciciot2023,iot23,target,total_bytes,0.065756
+iot23,ciciot2023,source_test,protocol,0.032842
+iot23,ciciot2023,source_test,total_bytes,0.006936
+iot23,ciciot2023,target,protocol,0.142994
+iot23,ciciot2023,target,total_bytes,0.583946

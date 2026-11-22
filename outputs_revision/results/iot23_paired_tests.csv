@@ -1,0 +1,5 @@
+dataset,model_a,model_b,mcc_diff,mcc_diff_ci_low,mcc_diff_ci_high,mcnemar_a_only_correct,mcnemar_b_only_correct,mcnemar_stat,mcnemar_p
+iot23,D_Hybrid_Weighted,A_Supervised_Only,0.0022,-0.0009,0.0054,185,144,4.8632,0.027435056514650263
+iot23,D_Hybrid_Weighted,A2_Supervised_TunedThreshold,-0.0006,-0.0022,0.001,32,41,0.8767,0.3491037299167903
+iot23,C_Hybrid_OR,A_Supervised_Only,-0.0006,-0.0011,-0.0001,1,7,1.0,0.0703125
+iot23,A2_Supervised_TunedThreshold,A_Supervised_Only,0.0028,-0.0004,0.0063,209,159,6.5245,0.010640105654132134

@@ -1,0 +1,5 @@
+src_dataset,tgt_dataset,canonical,src_columns,tgt_columns
+ciciot2023,iot23,protocol,protocol_type,proto
+ciciot2023,iot23,total_bytes,tot_sum,orig_ip_bytes+resp_ip_bytes
+iot23,ciciot2023,protocol,proto,protocol_type
+iot23,ciciot2023,total_bytes,orig_ip_bytes+resp_ip_bytes,tot_sum
